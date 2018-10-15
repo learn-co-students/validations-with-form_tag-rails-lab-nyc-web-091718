@@ -1,0 +1,24 @@
+<h2>Create a Post</h2>
+<%= form_tag post_path(@post), method: "post" do %>
+  <div class="field">
+    <%= label_tag "title", "Title" %>
+    <%= text_field_tag "title" %>
+  </div>
+
+  <div class="field">
+    <%= label_tag "category", "Category" %>
+    <p>Must be either "Fiction" or "Non-Fiction".</p>
+    <%= text_field_tag "category" %>
+    <p>
+      Please type carefully as our top scientists are working around the clock to
+      enable state-of-the-art dropdown technology for this form field.
+    </p>
+  </div>
+
+  <div class="field">
+    <%= label_tag "content", "Content" %>
+    <br />
+    <%= text_area_tag "content"%>
+  </div>
+  <%= submit_tag "Update" %>
+<% end %>
